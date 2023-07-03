@@ -10,3 +10,6 @@ estilo.style.color = "white";
 let container = document.querySelector("#teste");
 
 container.style.backgroundColor = "gray";
+
+
+//estilo.removeChild(container); removendo uma tag filha, primeiro chama a variavel que ta a pai e depois remove a filho
