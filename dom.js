@@ -7,4 +7,6 @@ let estilo = document.querySelector("body")
 estilo.style.backgroundImage = "linear-gradient(to right, red, blue)";
 estilo.style.color = "white";
 
+let container = document.querySelector("#teste");
 
+container.style.backgroundColor = "gray";
