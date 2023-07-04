@@ -11,5 +11,24 @@ let container = document.querySelector("#teste");
 
 container.style.backgroundColor = "gray";
 
+let img = document.createElement("img");// colocando o elemento criado na memoria
+
+img.src = "img/meninas.jpeg"; // pegando o link do video
+img.width = "500px";// ajustando css, largura
+img.height = "500px";//css altura
+
+estilo.appendChild(img);
+
+let link = document.createElement("a");
+
+link.innerText = "Meu link"
+link.href = "https://twitter.com/home";
+link.target = "blank"
+
+estilo.appendChild(link);
+
+
+
+
 
 //estilo.removeChild(container); removendo uma tag filha, primeiro chama a variavel que ta a pai e depois remove a filho
