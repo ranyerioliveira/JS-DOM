@@ -31,7 +31,17 @@ let link = document.createElement("a");//colocando o elemento criado na memoria
     link.style.fontSize = "25px"
     estilo.appendChild(link);
 
+//isertBefore
 
+var depois = document.createElement("p")
+
+var filho = document.querySelector("#filho1")
+
+var pai = filho.parentNode;
+
+pai.insertBefore(depois, filho);
+
+depois.innerHTML = "Texto antes da span filho"
 
 
 
