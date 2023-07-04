@@ -10,25 +10,28 @@ estilo.style.color = "white";
 let container = document.querySelector("#teste");
 
 container.style.backgroundColor = "gray";
-
-let img = document.createElement("img");// colocando o elemento criado na memoria
-
-img.src = "img/meninas.jpeg"; // pegando o link do video
-img.width = "500px";// ajustando css, largura
-img.height = "500px";//css altura
-
-estilo.appendChild(img);
-
-let link = document.createElement("a");
-
-link.innerText = "Meu link"
-link.href = "https://twitter.com/home";
-link.target = "blank"
-
-estilo.appendChild(link);
-
-
-
-
-
 //estilo.removeChild(container); removendo uma tag filha, primeiro chama a variavel que ta a pai e depois remove a filho
+
+//Adicionando uma imagem
+let imag = document.createElement("img");// colocando o elemento criado na memoria
+    imag.src = "https://avatars.githubusercontent.com/u/101151286?s=400&u=ffcfdd7ba2452c8299b7b52df30fa1fec5aa22d2&v=4"; // pegando a url da imagem
+    imag.width = "500px";// ajustando css, largura
+    imag.height = "500px";//css altura
+    estilo.appendChild(imag);
+
+document.write("<br><p>Link adicionado utilizando o DOM<p>")
+
+///adicionando um link
+
+let link = document.createElement("a");//colocando o elemento criado na memoria
+    link.innerText = "Meu link";
+    link.href = "https://twitter.com/home";
+    link.target = "blank";
+    link.style.textDecoration = "none";
+    link.style.fontSize = "25px"
+    estilo.appendChild(link);
+
+
+
+
+
