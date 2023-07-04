@@ -43,5 +43,15 @@ pai.insertBefore(depois, filho);
 
 depois.innerHTML = "Texto antes da span filho"
 
+// colocando atributo
+
+link.setAttribute("id", "twitter");// coloca o atributo que quer e depois o nome
+//link.getAttribute("id") verificar qual o atributo colocado
+
+//removendo atributo
+
+link.removeAttribute("id");
+
+
 
 
