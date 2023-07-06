@@ -52,6 +52,8 @@ link.setAttribute("id", "twitter");// coloca o atributo que quer e depois o nome
 
 link.removeAttribute("id");
 
+//colocando enveto de teclado no outro projeto
+
 
 
 
