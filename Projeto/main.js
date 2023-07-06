@@ -9,8 +9,19 @@ const keys = document.querySelectorAll(".key")
 
 function playNote(event){
    
+   
    //codigo da tecla
+   var keyCode;
 
+   const iskeyboard = event.type === "keydown"
+
+   if(iskeyboard){
+      keyCode = event.keyCode
+   }else{
+      keyCode = envet.target.dataset.key;
+   }
+   console.log(event.type)
+   console.log(keyCode)
    //tipo da tecla
 
    //se a tecla existe
@@ -30,4 +41,5 @@ keys.forEach(function (key){
 // ---keyboard type  (clicar no teclado)---
 //colocando enventos
 window.addEventListener("keydown", playNote) // o keydown serve para que toda vez que focar apertada uma tecla no teclad ele vai rodar uma function
+
 
