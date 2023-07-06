@@ -16,7 +16,7 @@ function playNote(event){
   
    //tipo da tecla
 
-  const key = document.querySelector('.key[data-key="${audioKeyCode}"]')
+  const key = document.querySelector(`.key[data-key="${audioKeyCode}"]`)
   
    //se a tecla existe
 
@@ -27,18 +27,19 @@ function playNote(event){
    }
     
    //play midia  
+   addPlaybgClass(key)
+   playAudio(audioKeyCode)
 
-   const audio = document.querySelector('audio[data-key="${audioKeyCode}"]')
-   audio.currentTime = 0;
-   audio.play()
+}
 
+function addPlaybgClass(key){
+   key.classList.add("playing")
 }
 
 function getKeyCode(event){
    let keyCode;
 
-   const iskeyboard = event.type === "keydown"
-
+   const iskeyboard = event.type === "keydown";
    if(iskeyboard){
       keyCode = event.keyCode
    }else{
@@ -50,9 +51,19 @@ function getKeyCode(event){
 
 // ---click with mouse (clicar o mouse)---
 
+function playAudio(audioKeyCode){
+   const audio = document.querySelector(`audio[data-key="${audioKeyCode}"]`)
+   audio.currentTime = 0;
+   audio.play()
+}
+
+function removePlayingClass(event){
+   event.target.classList.remove("playing")
+}
 
 keys.forEach(function (key){
    key.addEventListener("click", playNote )
+   key.addEventListener("transitionend", removePlayingClass )
 })//forEach siginifa para cada 
 
 // ---keyboard type  (clicar no teclado)---
