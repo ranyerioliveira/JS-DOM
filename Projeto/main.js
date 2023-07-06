@@ -16,12 +16,19 @@ function playNote(event){
   
    //tipo da tecla
 
-  // const key = document.querySelector('[data-key="${audioKeyCode}"]')
-   //console.log(key)
-
+  const key = document.querySelector('[data-key="${audioKeyCode}"]')
+  
    //se a tecla existe
+
+   const cantFoundAnyKey = !key //o ! é o inverter no boolean
+
+   if(cantFoundAnyKey){
+      return;
+   }
     
    //play midia  
+
+   
 
 }
 
