@@ -12,11 +12,11 @@ function playNote(event){
    
    let audioKeyCode = getKeyCode(event);
 
-   console.log(audioKeyCode)
+   //console.log(audioKeyCode)
   
    //tipo da tecla
 
-  const key = document.querySelector('[data-key="${audioKeyCode}"]')
+  const key = document.querySelector('.key[data-key="${audioKeyCode}"]')
   
    //se a tecla existe
 
@@ -28,7 +28,9 @@ function playNote(event){
     
    //play midia  
 
-   
+   const audio = document.querySelector('audio[data-key="${audioKeyCode}"]')
+   audio.currentTime = 0;
+   audio.play()
 
 }
 
