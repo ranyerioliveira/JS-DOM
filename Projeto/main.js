@@ -10,24 +10,32 @@ const keys = document.querySelectorAll(".key")
 function playNote(event){
    
    
-   //codigo da tecla
-   var keyCode;
+   let audioKeyCode = getKeyCode(event);
+
+   console.log(audioKeyCode)
+  
+   //tipo da tecla
+
+  // const key = document.querySelector('[data-key="${audioKeyCode}"]')
+   //console.log(key)
+
+   //se a tecla existe
+    
+   //play midia  
+
+}
+
+function getKeyCode(event){
+   let keyCode;
 
    const iskeyboard = event.type === "keydown"
 
    if(iskeyboard){
       keyCode = event.keyCode
    }else{
-      keyCode = envet.target.dataset.key;
+      keyCode = event.target.dataset.key;
    }
-   console.log(event.type)
-   console.log(keyCode)
-   //tipo da tecla
-
-   //se a tecla existe
-    
-   //play midia  
-
+   return keyCode;
 }
 
 
